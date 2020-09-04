@@ -1,7 +1,32 @@
 
-<div style="text-align: center;">
-  <h1>
-    {{title}}
-  </h1>
+<div>
+  <mat-toolbar color="accent" style="text-align: center;">
+    <p>Bit stuffing and Destuffing</p>
+  </mat-toolbar>
 </div>
-  <app-test></app-test>
+<div style="margin-left: 40%; margin-top: 30px;">
+  <div>
+      <mat-form-field class="input">
+          <input matInput placeholder="Value before stuffing" [(ngModel)]="raw" />
+      </mat-form-field>  
+      <button (click) = "stuffing()" mat-raised-button color = "accent" style="margin-left: 10px;">
+        Stuffing
+      </button>
+  </div>
+  <div>
+    <mat-form-field class="input">
+      <input matInput placeholder="Value after stuffing" [(ngModel)]="stuffed"/>
+    </mat-form-field>  
+    <button (click) = "destuffing()" mat-raised-button color = "accent" style="margin-left: 10px;">
+      Destuffing
+    </button>
+  </div>
+  <div>
+    <mat-form-field class="input">
+      <input matInput placeholder="Value after destuffing" [(ngModel)]="destuffed"/>
+  </mat-form-field>
+  <button (click) = "clear()" mat-raised-button color = "accent" style="margin-left: 10px;">
+    clear
+  </button>  
+  </div>
+</div>
